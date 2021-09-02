@@ -7,15 +7,15 @@ function init () {
     function liftOff() {
         document.getElementById("statusReport").innerHTML = "Houston, we have liftoff!";
     }
+    function redButton() {
+        document.getElementById("abortMission").style.backgroundColor = "red";
+    }
+    function clearButton() {
+        document.getElementById("abortMission").style.backgroundColor = "";
+    }
     button.addEventListener("click", liftOff);
-    missionAbort.addEventListener("mouseover", function(event) {
-        let element = document.getElementById("abortMission");
-        element.style.backgroundColor = "red";
-    });
-    missionAbort.addEventListener("mouseleave", function(event) {
-        let element = document.getElementById("abortMission");
-        element.style.backgroundColor = "";
-    })
+    missionAbort.addEventListener("mouseover", redButton);
+    missionAbort.addEventListener("mouseleave", clearButton);
 }
 
 window.addEventListener("load", init);
