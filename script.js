@@ -11,6 +11,10 @@ function init () {
     missionAbort.addEventListener("mouseover", function(event) {
         let element = document.getElementById("abortMission");
         element.style.backgroundColor = "red";
+    });
+    missionAbort.addEventListener("mouseleave", function(event) {
+        let element = document.getElementById("abortMission");
+        element.style.backgroundColor = "";
     })
 }
 
